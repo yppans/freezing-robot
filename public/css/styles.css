@@ -1,0 +1,90 @@
+.blacktext {
+color:#000000;
+    text-decoration: none;
+}
+.whitelink {
+color:#ffffff;
+    text-decoration: none;
+}
+.whitelink:hover {
+    color:#ffffff;
+    text-decoration: none;
+
+}
+body {
+background-image: url("http://candojax.com/concrete_seamless.png");
+
+}
+
+.navbar {
+border-radius: 0;
+}
+
+.navbar-static-bottom {
+    border-radius: 0;
+    z-index: 1000;
+    border-width: 0 0 1px;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 20px 0 0;
+height: 60px;
+}
+
+.maincont {
+margin-bottom: 60px;
+}
+.carousel {
+margin-bottom:20px;
+}
+.navbar-inverse ul li a, .dropdown-menu li a {
+	transition: all 1.5s ease 0s;
+	-moz-transition: all 1.5s ease 0s;
+	-webkit-transition: all 1.5s ease 0s;
+	-ms-transition: all 1.5s ease 0s;
+	-o-transition: all 1.5s ease 0s;
+}
+
+.open > .dropdown-menu {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);  
+  opacity:1;
+}
+.dropdown-menu {
+  opacity:.1;
+  -webkit-transform-origin: top;
+  transform-origin: top;
+  -webkit-animation-fill-mode: forwards;  
+  animation-fill-mode: forwards; 
+  -webkit-transform: scale(1, 0);
+  display: block; 
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+}
+
+.social li, .social li a {
+display:inline-block;
+	background: none repeat scroll 0 0;
+	-webkit-border-radius: 20px 20px 0px 0px;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 20px 20px 0px 0px;
+	transition: all .75s ease 0s;
+	-moz-transition: all 1s ease 0s;
+	-webkit-transition: all .75s ease 0s;
+	-ms-transition: all .75s ease 0s;
+	-o-transition: all .75s ease 0s;
+ 	 -webkit-transform-origin: 50% 100%;
+ 	 -moz-transform-origin: 50% 100%;
+ 	 -ms-transform-origin: 50% 100%;
+ 	 -o-transform-origin: 50% 100%;
+}
+.social li a:hover {
+	background: transparent;
+
+	transform: scale(2.0);
+	-webkit-transform: scale(2.0);
+	-moz-transform: scale(2.0);
+	-ms-transform: scale(2.0);
+	-o-transform: scale(2.0);
+}
