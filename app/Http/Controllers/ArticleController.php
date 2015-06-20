@@ -81,6 +81,15 @@ class ArticleController extends Controller
         return redirect('article');
 
     }
+
+    public function delete($id)
+    {
+        $article = Article::findorFail($id);
+	$article->delete();
+	$successmsg = "The requested article has been deleted.";
+                return redirect('article')->with('message', $successmsg);
+
+    }
 /*
 /*
     public function newArticle()

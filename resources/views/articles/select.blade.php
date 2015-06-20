@@ -1,10 +1,13 @@
 @extends('layouts.master')
 
 @section('content')
+@if (Session::has('message'))
+    <div class="alert alert-info blacktext"><b>{{ Session::get('message') }}</b></div>
+@endif
 <div class="table-responsive">
 
                 
-              <table id="mytable" class="table table-bordred table-striped">
+              <table id="mytable" class="table table-bordered table-striped">
                    
                    <thead>
                    
@@ -31,8 +34,8 @@
     <td>{{ $article->published_at }}</td>
     <td>Published</td>
     <td><a href="/articles/category/{{ $article->tags }}">{{ $article->tags }}</a></td>
-    <td><a href="/article/{{ $article->id }}/edit"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></a></td>
-    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+    <td><a href="/article/{{ $article->id }}/edit"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary" data-title="Edit" data-toggle="modal" data-target="#edit" ><i class="fa fa-lg fa-edit"></i></button></p></a></td>
+    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger" data-title="Delete" data-toggle="modal" data-target="#delete" ><i class="fa fa-lg fa-trash"></i></button></p></td>
     </tr> 
 
 @endforeach
@@ -74,8 +77,8 @@
        
       </div>
         <div class="modal-footer ">
-        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+        <a href="/article/{{ $article->id }}/delete" class="btn btn-danger"><i class="fa fa-trash"></i> Yes</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="fa fa-close"></span> No</button>
       </div>
         </div>
     <!-- /.modal-content --> 

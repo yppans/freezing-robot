@@ -17,6 +17,7 @@ Route::controllers([
 //Admin Functions
 Route::get('manageusers', 'UserMgmtController@index');
 Route::resource('usermanager', 'UserMgmtController');
+Route::get('article/{id}/delete', ['as' => 'article.delete', 'uses' => 'ArticleController@destroy']);
 Route::resource('article', 'ArticleController');
 //End Admin Functions
 
