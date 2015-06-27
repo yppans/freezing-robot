@@ -1,13 +1,5 @@
 
 <div class="form-group">
-	{!! Form::label('email', 'Email:') !!}
-	{!! Form::text('email', null, ['class' => 'form-control', 'required' => '', 'placeholder' => 'email']) !!}
-</div>
-<div class="form-group">
-	{!! Form::label('password', 'New Password:') !!}
-	{!! Form::password('password', ['class' => 'form-control', 'required' => '']) !!}
-</div>
-<div class="form-group">
 	{!! Form::label('phone', 'Phone Number:') !!}
 	{!! Form::text('phone', null, ['class' => 'form-control', 'required' => '', 'placeholder' => 'Phone Number']) !!}
 </div>

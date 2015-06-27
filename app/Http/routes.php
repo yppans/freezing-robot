@@ -31,7 +31,10 @@ Route::resource('articles', 'ArticlesController',
 
 
 //Separate edit controller to avoid using userid in URL
-Route::get('profile/edit', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
+Route::get('account/edit', ['as' => 'editaccount', 'uses' => 'ProfileController@editAccount']);
+Route::get('profile/edit', ['as' => 'editprofile', 'uses' => 'ProfileController@editProfile']);
+Route::any('AccountUpdate', ['as' => 'updateaccount', 'uses' => 'ProfileController@updateAccount']);
+Route::any('DetailsUpdate', ['as' => 'updatedetails', 'uses' => 'ProfileController@updateProfile']);
 Route::resource('profile', 'ProfileController', ['except' => 'edit']);
 
 

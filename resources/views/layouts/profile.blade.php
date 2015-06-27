@@ -6,7 +6,7 @@
     @endif
     <div class="row">
         <div class="col-lg-9 col-md-9 col-sm-9">
-            <h1>{!! $profile->name !!}</h1>
+            <h1>{!! $profile->name !!} <small>{!! $profile->username !!}</small></h1>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3">
         @if($profile->avatar)
